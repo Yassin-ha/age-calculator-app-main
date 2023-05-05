@@ -1,0 +1,183 @@
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 86%);
+    min-height: 100vh;
+}
+.container {
+    background-color: #fff;
+    width: 60%;
+    border-radius: 30px 30px 155px 30px;
+    padding: 50px;
+    margin: 40px 0;
+    box-shadow: 3px 3px 8px 1px #00000021;
+}
+.container header {
+    display: flex;
+    justify-content: space-between;
+    height: 170px;
+}
+.container .birthday {
+    display: flex;
+    gap: 25px;
+    color: hsl(0, 1%, 44%);
+}
+.container .birthday p {
+    padding-bottom: 15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.container .birthday input {
+    padding: 15px 25px;
+    font-size: 30px;
+    width: 145px;
+    font-weight: 600;
+    outline: none;
+    border: 1px solid hsl(0, 0%, 86%);
+    
+}
+.container .birthday .invalid-msg {
+    font-size: 12px;
+    color: var(--light-red);
+    font-style: italic;
+}
+.container .btn {
+    display: flex;
+    align-items: end;
+    height: 100%;
+}
+.container .btn button {
+    background-color: var(--purple);
+    border-radius: 50%;
+    padding: 20px;
+    height: fit-content;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.container .btn button:hover {
+    background-color: #000;
+}
+.your-age {
+
+}
+.your-age .age{
+    font-size: 2.8rem;
+    font-weight: 800;
+    font-style: italic;
+}
+.your-age .years, .your-age .months {
+    margin-bottom: -40px;
+}
+.your-age .age h1 span {
+    letter-spacing: 10px;
+    color: var(--purple);
+}
+@keyframes invalid-error{
+    0% {
+        transform: translateX(0)
+    }
+    25% {
+        transform: translateX(-10px)
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container .birthday input {
+        font-size: 20px;
+        width: 115px;
+    }
+    .container .btn button {
+        padding: 10px;
+    }
+    .your-age .age {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .container {
+        padding: 35px;
+        border-radius: 30px 30px 120px 30px;
+    }
+    .container .birthday input {
+        font-size: 18px;
+        width: 90px;
+    }
+    .your-age .age {
+        font-size: 1.7rem;
+    }
+    .container .btn button {
+        padding: 6px;
+    }
+    .btn button img {
+        width: 40px;
+    }
+    .your-age .years, .your-age .months {
+        margin-bottom: -35px;
+    }
+    .your-age .age {
+        font-size: 1.7rem;
+    }
+    
+}
+@media screen and (max-width: 680px) {
+    .container {
+        width: 90%;
+        padding: 25px 15px;
+        border-radius: 30px 30px 80px 30px;
+    }
+    .container header {
+        flex-direction: column;
+    }
+    .container .birthday p {
+        font-size: 14px;
+    }
+    .container .birthday input {
+        padding: 10px 5px;
+        font-size: 18px;
+        width: 100%;
+    }
+    .container .btn {
+        align-items: center;
+        justify-content: center;
+    }
+    .container .btn button {
+        padding: 10px;
+    }
+    .btn button img {
+        width: 25px;
+    }
+    .your-age .years, .your-age .months {
+        margin-bottom: -20px;
+    }
+    .your-age .age {
+        font-size: 1.5rem;
+    }
+    .your-age .age h1 span {
+        letter-spacing: 0px;
+        padding-right: 5px;
+    }
+}
