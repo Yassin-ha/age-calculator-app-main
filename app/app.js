@@ -18,6 +18,10 @@ btn.addEventListener("click", function () {
     let leadingDay = 0;
     let leadingMonth = 0;
 
+    monthInput.style.animation = "none";
+    yearInput.style.animation = "none";
+    dayInput.style.animation = "none";
+
     if (
         yearInput.value === "" ||
         monthInput.value === "" ||
