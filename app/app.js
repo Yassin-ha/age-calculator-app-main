@@ -38,6 +38,14 @@ btn.addEventListener("click", function () {
         dayInput.nextElementSibling.innerHTML = empty;
         dayInput.previousElementSibling.style.color = "var(--light-red)";
     } else if (dayInput.value > 31 || dayInput.value <= 0) {
+        monthInput.style.border = "1px solid hsl(0, 0%, 86%)";
+        monthInput.nextElementSibling.innerHTML = '';
+        monthInput.previousElementSibling.style.color = "hsl(0, 1%, 44%)";
+
+        dayInput.style.border = "1px solid hsl(0, 0%, 86%)";
+        dayInput.nextElementSibling.innerHTML = '';
+        dayInput.previousElementSibling.style.color = "hsl(0, 1%, 44%)";
+
         dayInput.nextElementSibling.innerHTML = "Must be a valid day";
         dayInput.style.border = "1px solid var(--light-red)";
         dayInput.style.animation = "invalid-error 0.1s";
@@ -52,6 +60,14 @@ btn.addEventListener("click", function () {
         monthInput.value > 12 ||
         monthInput.value <= 0
     ) {
+        dayInput.style.border = "1px solid hsl(0, 0%, 86%)";
+        dayInput.nextElementSibling.innerHTML = '';
+        dayInput.previousElementSibling.style.color = "hsl(0, 1%, 44%)";
+
+        yearInput.style.border = "1px solid hsl(0, 0%, 86%)";
+        yearInput.nextElementSibling.innerHTML = '';
+        yearInput.previousElementSibling.style.color = "hsl(0, 1%, 44%)";
+
         monthInput.nextElementSibling.innerHTML = "Must be a valid month";
         monthInput.style.border = "1px solid var(--light-red)";
         monthInput.style.animation = "invalid-error 0.1s";
@@ -63,6 +79,14 @@ btn.addEventListener("click", function () {
         yearInput.style.border = "1px solid var(--light-red)";
         yearInput.previousElementSibling.style.color = "var(--light-red)";
     } else if (yearInput.value > currentYear) {
+        dayInput.style.border = "1px solid hsl(0, 0%, 86%)";
+        dayInput.nextElementSibling.innerHTML = '';
+        dayInput.previousElementSibling.style.color = "hsl(0, 1%, 44%)";
+
+        monthInput.style.border = "1px solid hsl(0, 0%, 86%)";
+        monthInput.nextElementSibling.innerHTML = '';
+        monthInput.previousElementSibling.style.color = "hsl(0, 1%, 44%)";
+
         yearInput.nextElementSibling.innerHTML = "Must be in the past";
         yearInput.style.border = "1px solid var(--light-red)";
         yearInput.style.animation = "invalid-error 0.1s";
